@@ -5,12 +5,10 @@ import { Button } from "@mui/material";
 
 export interface TodoType {
   id: number;
-  todo: string;
+  text: string;
 }
 
-export type ActionType =
-  | { type: "ADD"; text: string }
-  | { type: "DELETE"; id: number };
+export type ActionType =  { type: "ADD"; text: string } | { type: "DELETE"; id: number };
 
 function App() {
   const [text, setText] = useState<string>("");
