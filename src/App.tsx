@@ -7,7 +7,7 @@ export interface TodoType {
   id: number;
   todo: string;
 }
-// actions
+
 export type ActionType =
   | { type: "ADD"; text: string }
   | { type: "DELETE"; id: number };
@@ -17,7 +17,7 @@ function App() {
 
   const [todos, dispatch] = useReducer(reducer, []);
 
-  // todo add button
+ 
   const addTodo = () => {
     if (text) {
       dispatch({
@@ -28,8 +28,8 @@ function App() {
 
   };
   return (
-    <div className="md:w-9/12 w-11/12 mx-auto py-20 App" style={{ textAlign: 'center' }}>
-      <h1 className="text-center py-4 text-white font-bold text-3xl tracking-wider italic first-letter:text-pink-500">
+    <div  style={{ textAlign: 'center' }}>
+      <h1 >
         My First Todo
       </h1>
 
